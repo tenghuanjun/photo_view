@@ -20,7 +20,8 @@ double getScaleForScaleState(
               scaleBoundaries.outerSize, scaleBoundaries.childSize),
           scaleBoundaries);
     case PhotoViewScaleState.originalSize:
-      return _clampSize(1.0, scaleBoundaries);
+      //修改双击不能放大
+      return _clampSize(1.8, scaleBoundaries);
     default:
       return null;
   }
